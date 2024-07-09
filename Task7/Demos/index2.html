@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onmouseover="returnOrginal(this)" onmouseleave="changeSource(this)"  -->
+    <div class="marbles">
+        <p style="text-align: center;">
+            <img src="../Images/marble3.jpg" alt="" id="1">
+            <img src="../Images/marble1.jpg" alt="" id="2">
+            <img src="../Images/marble1.jpg" alt="" id="3">
+            <img src="../Images/marble1.jpg" alt="" id="4">
+            <img src="../Images/marble1.jpg" alt="" id="5">
+        </p>
+    </div>
+    <a href="Calculator.html">
+        <input type="button" value="Next Task">
+    </a>
+
+    <script src="../scripts/script.js"></script>
+    <script>
+        const marbles=document.querySelectorAll('.marbles');
+        marbles.forEach(marble => {
+            marble.addEventListener('mouseleave', function(){
+                changeSource(this);
+            });
+            marble.addEventListener('mouseover', function(){
+                returnOriginal(this);
+            });
+        });
+
+        var i=0;
+        var int;
+        var time=true;
+        function changeSource(img){
+            document.getElementById(i%5+1).src = "../Images/marble1.jpg";
+            i++;
+            document.getElementById(i%5+1).src = "../Images/marble3.jpg";
+            // if(time){
+                int=setTimeout(function(){
+                    changeSource(img);
+                }, 1000);
+            
+            // }
+        }
+
+        function returnOriginal(img){
+            time=false;
+            clearTimeout(int);
+        }
+    </script>
+</body>
+</html>

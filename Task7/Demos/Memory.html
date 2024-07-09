@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Layout for Images</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; /* Gap between grid items */
+  }
+  .grid-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-container" onmouseenter="firstlook()">
+  <!-- Row 1 -->
+  <div class="grid-item"><img src="../Images/1.gif" id="11" alt=" 11" onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/2.gif" id="21" alt=" 21"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/4.gif" id="41" alt=" 41"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/3.gif" id="31" alt=" 31"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/4.gif" id="42" alt=" 42"onclick="reveal(this)"></div>
+  <!-- Row 2 -->
+  <div class="grid-item"><img src="../Images/1.gif" id="12" alt=" 12"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/5.gif" id="51" alt=" 51"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/6.gif" id="61" alt=" 61"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/5.gif" id="52" alt=" 52"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/3.gif" id="32" alt=" 32"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/2.gif" id="22" alt=" 22"onclick="reveal(this)"></div>
+  <div class="grid-item"><img src="../Images/6.gif" id="62" alt=" 62"onclick="reveal(this)"></div>
+  
+  
+</div>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

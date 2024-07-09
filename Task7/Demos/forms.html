@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="f_name" id="fname" />
+      <input type="text" name="l_name" id="lname"/>
+      <!-- <input type="submit" value="submit" /> -->
+      <input type="button" value="submit" onclick="sumbitForm(this)" />
+      <input type="button" value="clear" onclick="clearForm(this)" />
+      <input type="button" value=">" onclick="clearText(this)" />
+    </form>
+    
+    <!-- <input type="text" name="f_name" onchange="displayVal(this)" /> -->
+    <!-- <input type="text" name="f_name" onfocus="displayVal(this)" /> -->
+    <!-- <input
+      type="text"
+      name="f_name"
+      oninput="displayVal(this)"  
+    /> -->
+    
+
+    <!--
+object (property,methods) 
+attribute=>property
+
+-->
+    <script>
+        function sumbitForm(input) {
+          // document.forms[0].submit();
+          input.type = "text";
+        }
+
+        function displayVal(val) {
+          console.log(val.value);
+        }
+        function clearForm(){
+            document.getElementById("fname").value="";
+            document.getElementById("lname").value="";
+        }
+        function clearText(input){
+            document.getElementById("fname").value="";
+        }
+
+      function showSelection() {
+        //clear
+        document.getElementById("id1").innerHTML = "";
+        var sel = document.getElementById("menu");
+        var index = sel.selectedIndex;
+        var arrOption = sel.options;
+        // if (index === 0) {
+        //   alert("Please select an option");
+        // } else {
+        //   document.getElementById("id1").innerHTML = sel.options[index].value;
+        // }
+        //multiple selection
+        for (var i = 0; i < arrOption.length; i++) {
+          if (arrOption[i].selected) {
+            document.getElementById("id1").innerHTML +=
+              "<br>" + arrOption[i].text;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
