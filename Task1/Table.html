@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet"  href="Styles/form.css">
+</head>
+<body>
+    <form
+  action="https://formspree.io/f/xkgwnbzj"
+  method="POST"
+>
+    <table  border="1" cellpadding="10" cellspacing="6">
+        <caption><h1><u>Registeration Form</u> </h1></caption>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name="firstname" placeholder="Enter Your first name"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="lastname" placeholder="Enter Your last name"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email" placeholder="Enter Your email"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="password" placeholder="Enter Your password"></td>
+        </tr>
+        <tr >
+            <td rowspan="2">Gender</td>
+            <td><input type="radio" name="gender" value="male"> <label>male</label></td>
+        </tr>
+        <tr>
+            <td>
+            <input type="radio" name="gender" value="female"><label>female</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Country
+        </td>
+        <td>
+            <select name="country" id="country">
+                <optgroup label="Africa">
+                    <option value="Egypt">Egypt</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Libya">Libya</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Morroco">Morroco</option>
+                </optgroup>
+                <optgroup label="Europe" disabled>
+                    <option value="Italy">Italy</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Spain">Spain</option>
+                </optgroup>
+                <optgroup label="Asia">
+                    <option value="Palestine">Palestine</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="India">India</option>
+                </optgroup>
+                
+        </td>
+    </tr>
+    <tr>
+        <td>Birthday</td>
+        <td><input type="date" name="Birthday" id=""></td>
+    </tr>
+    <tr>
+       
+            <th colspan="2"><u>Interests</u></th>
+        
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="interest">
+                <input type="checkbox" name="interests" id="" value="Sports">
+            <label >Suffering</label>
+            <input type="checkbox" name="interests" id="" value="Music">
+            <label >Love</label>
+            <input type="checkbox" name="interests" id="" value="Fashion">
+            <label >Money</label>
+            </div>
+            <div class="interest">
+                <input type="checkbox" name="interests" id="" value="Reading">
+            <label >Reading</label>
+            <input type="checkbox" name="interests" id="" value="Shoppting">
+            <label >Shopping</label>
+            <input type="checkbox" name="interests" id="" value="Movies">
+            <label >Movies</label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2"><u>Bio</u></th>
+    </tr>
+    <tr>
+        <!-- <div class="textarea"> -->
+        <td colspan="2">
+                <textarea class="textarea"></textarea>
+        </td>
+        <!-- </div> -->
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="submitform">
+            <input type="submit">
+            <input type="reset">
+        </div>
+        </td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>
