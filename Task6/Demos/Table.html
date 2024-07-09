@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet"  href="../style/form.css">
+</head>
+<body>
+    <form
+    action="info.html"
+  method="GET"
+>
+    <table  border="1" cellpadding="10" cellspacing="6">
+        <caption><h1><u>Registeration Form</u> </h1></caption>
+        <tr>
+            <td>Title</td>
+            <td><input type="text" name="title" placeholder="Enter title here" id="title"></td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name="firstname" placeholder="Enter Your first name" id="fname"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="lastname" placeholder="Enter Your last name" id="lname"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email" placeholder="Enter Your email" id="email"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="address" name="address" placeholder="Enter Your Address" id="address"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="password" placeholder="Enter Your password" id="password"></td>
+        </tr>
+        <tr >
+            <td rowspan="2">Gender</td>
+            <td><input type="radio" name="gender" value="male" id="male"> <label>male</label></td>
+        </tr>
+        <tr>
+            <td>
+            <input type="radio" name="gender" value="female" id="female"><label>female</label>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="submitform">
+            <input type="submit">
+            <input type="reset">
+        </div>
+        </td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>

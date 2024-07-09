@@ -1,0 +1,37 @@
+body {
+    background-color: gray;
+}
+h1{
+    text-decoration:underline ;
+}
+h1,h2,h3,h4,h5,h6{
+    text-align:center;
+}
+.welc{
+    text-align:right;
+    font-size:30px;
+    color: Red;
+}
+.welcome{
+    text-align:center;
+
+}
+.top{
+    text-align:left;
+    font-size: 20px;
+}
+.next{
+    text-align:right;
+    font-size: 20px;
+
+}
+
+#idp{
+    text-decoration: underline;
+}
+.google,.social{
+    text-align: center ;
+}
+.copyrights{
+    text-align: center;
+}

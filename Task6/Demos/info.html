@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+    <p>Email: <span id="display-email"></span></p>
+    <p>address: <span id="display-address"></span></p>
+    <p>gender: <span id="display-gender"></span></p>
+    <p>password: <span id="display-password"></span></p>
+
+
+    
+    <script >
+            document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+
+    const jobtitle = params.get('title');
+    const name = params.get('firstname');
+    const email = params.get('email');
+    const address = params.get('address');
+    const  password= params.get('password');
+    const gender = params.get('gender');
+
+    document.getElementById('greeting').textContent = 'Welcome, ' + jobtitle + ', ' + name;
+    document.getElementById('display-email').textContent = email;
+    document.getElementById('display-address').textContent = address;
+    document.getElementById('display-gender').textContent = gender;
+    document.getElementById('display-password').textContent = password;
+});
+    </script>
+</body>
+</html>
