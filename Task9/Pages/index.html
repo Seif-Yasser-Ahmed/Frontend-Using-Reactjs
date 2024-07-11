@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <video src="../Resources/messi.mp4" id="video" style="width: 80%;" onclick="player()" onplaying="playing()" onseeking="playing()" ondurationchange="playing()" ontimeupdate="playing()"></video>
+        <p id="duration"></p>
+        <br>
+        <input type="range" min="0" max="100" step="1" value="0" id="rangeTime" style="width: 100%;" onchange="updateTime()" ondurationchange="updateTime()">
+        <br><br>
+        <input type="button" value="10s Back"  onclick="backtime()">
+        <input type="button" id="play" value="Play" onclick="player()">
+        <input type="button" id="mute" id="mute" value="Mute" onclick="muted()"></input>
+        <input type="range" min="0" max="100" step="1" value="100" id="rangeVolume" onchange="volumeChange()" >
+        <input type="button" value="10s Front" onclick="fronttime()">
+        <input type="button" value="Full Screen" onclick="fullscreen()">
+    </div>
+    <script src="../Scripts/script.js"></script>
+</body>
+</html>
