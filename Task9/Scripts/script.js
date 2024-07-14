@@ -28,8 +28,13 @@ function muted(){
     }
 }
 
+function changeSpeed(){
+    // console.log(document.getElementById('rangeSpeed'));
+    document.getElementsByTagName('video')[0].playbackRate=document.getElementById('rangeSpeed').value;
+}
+
 function volumeChange(){
-    document.getElementsByTagName('video')[0].volume=document.getElementById('rangeVolume').value/100;
+    document.getElementsByTagName('video')[0].volume=document.getElementById('rangeVolume').value;
 }
 
 function updateTime(){
@@ -61,4 +66,14 @@ function volumeChange(){
 
 function fullscreen(){
     document.getElementsByTagName('video')[0].requestFullscreen();
+}
+
+function changeRed(){
+    // "#"+(155).toString(16)+(102).toString(16)+(102).toString(16);
+    var red=document.getElementById('rangeRed').value;
+    var green=document.getElementById('rangeGreen').value;
+    var blue=document.getElementById('rangeBlue').value;
+    console.log(red,green,blue);
+    document.getElementById('par').style.color='rgb(' + red + ',' + green + ',' + blue + ')';
+    // console.log(document.getElementById('par').style);
 }
