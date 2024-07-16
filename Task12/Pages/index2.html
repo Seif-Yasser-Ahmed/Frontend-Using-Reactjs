@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .nav{
+        display:flex;
+        justify-content:space-around;
+        flex-direction:row;
+        align-items:center;
+        background-color: lightslategray;
+        border-radius: 10px;  
+        flex-wrap: wrap;
+    }
+    span{
+        padding:20px;
+        margin:5px;
+        text-align: center;
+    }
+    .container{
+        display:flex;
+        justify-content:space-around;
+        align-items:space-around;
+        /* margin:10px; */
+        height:auto;
+        width:auto;
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+    .child{
+        display: flex;
+        border-color: black;
+        border-style: solid;
+        margin:10px;
+        width:40%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer{
+        background-color: lightslategray;
+        text-align: center;
+        width:100%;
+    }
+
+</style>
+<body>
+    <div class="nav">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+    </div>
+    <div class="container">
+        <div class="child">
+            <span>This is a flex item</span>
+            <div class="footer">
+                <span>Footer</span>
+            </div>
+        </div>
+        <div class="child">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam, ducimus eum laudantium eos temporibus labore. Dicta distinctio ex repellendus consectetur. Deserunt blanditiis excepturi tempore obcaecati asperiores aliquid, qui sit?</span>
+            <div class="footer">
+                <span>Footer</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
