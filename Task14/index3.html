@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+    var fruits = ["apple", "strawberry", "banana", "orange", "mango"];
+
+    const allStrings = fruits.every(fruit => typeof fruit === 'string');
+    console.log("All elements are strings: ", allStrings);
+    alert("All elements are strings: "+allStrings);
+
+    const startwithA = fruits.some(fruit => fruit.startsWith('a'));
+    console.log("Some elements start with 'a': ", startwithA);
+    alert("Some elements start with 'a': "+startwithA);
+
+   const filteredFruits = fruits.filter(fruit => fruit.startsWith('b') || fruit.startsWith('s'));
+   console.log("Filtered fruits:", filteredFruits);
+   alert("Filtered fruits: "+filteredFruits);
+
+   const likeFruits = fruits.map(fruit =>`I like ${fruit}`);
+   console.log("Like fruits: ", likeFruits);
+   alert("Like fruits: "+likeFruits);
+
+   likeFruits.forEach(fruit => alert(fruit));
+
+    </script>
+    
+</body>
+</html>

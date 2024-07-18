@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Swapping Values using destructing</h1>
+
+<script>
+
+// var x = 5;
+var x=prompt("Enter the value of x: ");
+var y=prompt("Enter the value of y: ");
+alert(x);
+// var y = 10;
+alert(y);
+
+console.log("x = " + x);
+alert("X before swapping is "+x);
+console.log("y = " + y); 
+alert("y before swapping is "+y);
+
+
+[x, y] = [y, x];
+
+console.log("After swapping: x = " + x + " and y = " + y);
+alert("After swapping: x = " + x + " and y = " + y);
+
+</script>
+
+<button>
+<a href="index2.html">Next Task</a>
+</button>
+    
+</body>
+</html>
