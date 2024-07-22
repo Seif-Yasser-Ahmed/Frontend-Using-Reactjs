@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<body>
+    <script>
+        function validateCourseInfo(course) {
+            const validKeys = ['courseName', 'courseDuration', 'courseOwner'];
+            const keys = Object.keys(course);
+
+            var defaultObj = {
+                courseName: "JS",
+                courseDuration: 10,
+                courseOwner: "Yassmin Ahmed"
+            };
+
+            for (const key of keys) {
+                if (!validKeys.includes(key)) {
+                throw new Error(`Invalid property: ${key}`);
+                break;
+                }
+            }
+
+            var result = Object.assign({}, defaultObj, course);
+            console.log(result);
+        }
+
+        const course2 = {
+            courseName: "React",
+            courseDuration: 25,
+            courseOwner: "Seif Yasser"
+        };
+        validateCourseInfo(course2);
+
+        const course3 = {
+            courseName: "HTML",
+
+        };
+        validateCourseInfo(course3);
+
+        const course4 = {
+            courseName: "React",
+            courseDuration: 50,
+            Owner: "Yassmin Ahmed"
+            // courseOwner: "Yassmin Ahmed"
+        };
+        validateCourseInfo(course4);
+    </script>
+
+    <button>
+        <a href="index2.html" >Next Task</a>
+    </button>
+</body>
+</html>

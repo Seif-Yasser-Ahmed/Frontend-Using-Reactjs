@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>symbol iterator</title>
+</head>
+<body>
+    
+    <script>
+    var myObj = 
+    {
+    username: "Seif",
+    age: 21,
+    [Symbol.iterator]: function() 
+      {
+    var keys = Object.keys(this); 
+    var counter = 0;
+    var self = this;
+    return {
+    next: function() 
+    {
+        if (counter < keys.length) {
+          var key = keys[counter++];
+          return { value: { key: key, value: self[key] }, done: false }; // use self instead of this
+        } else {
+          return { value: undefined, done: true };
+        }
+    },
+        };
+      },
+    };
+
+var iterator = myObj[Symbol.iterator]();
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+
+for (var item of myObj) {
+    console.log("Key:", item.key, ", Value:", item.value);
+}
+
+    </script>
+    
+</body>
+</html>

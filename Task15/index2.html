@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>symbol replace</title>
+</head>
+<body>
+
+    <!-- <h1>Symbol.Replace</h1> -->
+
+    <script>
+
+    var myOwnObj = {
+    [Symbol.replace]: function(str, p1, p2, offset, s) 
+    {
+    // check if str is a string and its length exceeds 15 characters
+    if (typeof str === 'string' && str.length > 15) 
+    {
+      // truncate the string to 15 characters 
+      return str.slice(0, 15) + '...';
+    }
+    
+    return str;
+
+    },
+    };
+
+    
+    var longString = "This is a more than 15 letters' string that will be truncated.";
+    var truncatedString = longString.replace(myOwnObj);
+
+    console.log("String: " + longString);
+    console.log("String after truncatuation: " + truncatedString);  
+
+    console.log("Another example"); 
+    
+
+    var anotherlongString = "eh eldenia";
+    var anothertruncatedString = anotherlongString.replace(myOwnObj);
+
+    console.log("String: " + anotherlongString);
+    console.log("String after truncatuation: " + anothertruncatedString);  
+
+
+    </script>
+    <button>
+    <a href="index3.html" >Next Task</a>
+    </button>
+    
+</body>
+</html>
